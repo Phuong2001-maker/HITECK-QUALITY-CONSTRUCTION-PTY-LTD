@@ -31,7 +31,74 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
+    <style>
+        .step-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.7s;
+        }
+    
+        .step-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+    
+        .step-icon {
+            font-size: 2rem;
+            color: white;
+        }
+    
+        .bg-gradient-success {
+            background: linear-gradient(90deg, #28a745, #218838);
+        }
+    
+        .bg-gradient-primary {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+        }
+    
+        .bg-gradient-purple {
+            background: linear-gradient(90deg, #6f42c1, #5a32a3);
+        }
+    
+        .bg-gradient-warning {
+            background: linear-gradient(90deg, #ffc107, #e0a800);
+        }
+    
+        .bg-gradient-danger {
+            background: linear-gradient(90deg, #dc3545, #b52a35);
+        }
+        .bg-gradient-info {
+    background: linear-gradient(90deg, #17a2b8, #117a8b); 
+}
 
+.bg-gradient-dark {
+    background: linear-gradient(90deg, #343a40, #212529); 
+}
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+    
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .step-number {
+            font-weight: bold;
+            color: white;
+            margin-right: 15px;
+            font-size: 2.5rem; /* Tăng kích thước số */
+        }
+    
+        .step-icon {
+            font-size: 2rem;
+        }
+    </style>
     <body>
 
         <!-- Spinner Start -->
@@ -116,389 +183,110 @@
         <!-- Header End -->
 
         <!-- Services Start -->
-        <div class="container-fluid service bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <p class="text-uppercase text-secondary fs-5 mb-0">Our Services</p>
-                    <h2 class="display-4 text-capitalize mb-3">our service is creative, & decent</h2>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-success d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">1</span> Custom Home Builds – From concept to completion, we create tailor-made homes that reflect your unique style and preferences.</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-1.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 120px; height: 120px;">
-                                    <i class="fas fa-home text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">General Construction</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                                
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center ps-4 w-100">
-                                    <h4>General Construction</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-home text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-2.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 120px; height: 120px;">
-                                    <i class="fas fa-users-cog text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">Property Maintenance</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                                
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Property Maintenance</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-users-cog text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-3.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 120px; height: 120px;">
-                                    <i class="fas fa-hospital-user text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">Project managment</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                               
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Project managment</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-hospital-user text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-4.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 100px; height: 100px;">
-                                    <i class="fas fa-file-invoice-dollar text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">Virtual Design & Build</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                                
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Virtual Design & Build</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-file-invoice-dollar text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-5.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 100px; height: 100px;">
-                                    <i class="fas fa-cogs text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">Preconstruction</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                                
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Preconstruction</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-cogs text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-6.jpg" class="img-fluid w-100" alt="Image">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="bg-secondary btn-xl-square mx-auto" style="width: 100px; height: 100px;">
-                                    <i class="fas fa-sitemap text-primary fa-4x"></i>
-                                </div>
-                                <p style="color: #f0f0f0;"class="d-block fs-4 my-4">Design Build</p>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
-                                
-                            </div>
-                            <div class="service-tytle">
-                                <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Design Build</h4>
-                                </div>
-                                <div class="btn-xl-square bg-secondary p-4" style="width: 80px; height: 80px;">
-                                    <i class="fas fa-sitemap text-primary fa-2x"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <i class="fa-solid fa-house-chimney-user step-icon"></i>
             </div>
         </div>
-        <!-- Services End -->
 
-        <!-- Fact Counter -->
-        <div class="container-fluid counter py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="counter-box">
-                            <div class="counter-item">
-                                <div class="counter-item-style"></div>
-                                <div class="counter-item-inner p-5">
-                                    <i class="fas fa-thumbs-up fa-4x text-secondary"></i>
-                                    <h4 class="text-dark my-4">Completed Projects</h4>
-                                    <div class="counter-counting">
-                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">456</span>
-                                        <span class="h1 fw-bold text-secondary">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="counter-box">
-                            <div class="counter-item">
-                                <div class="counter-item-style"></div>
-                                <div class="counter-item-inner p-5">
-                                    <i class="fas fa-users fa-4x text-secondary"></i>
-                                    <h4 class="text-dark my-4">Happy Customers</h4>
-                                    <div class="counter-counting">
-                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">513</span>
-                                        <span class="h1 fw-bold text-secondary">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="counter-box">
-                            <div class="counter-item">
-                                <div class="counter-item-style"></div>
-                                <div class="counter-item-inner p-5">
-                                    <i class="fas fa-user fa-4x text-secondary"></i>
-                                    <h4 class="text-dark my-4">Qualified Engineers</h4>
-                                    <div class="counter-counting">
-                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">53</span>
-                                        <span class="h1 fw-bold text-secondary">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="counter-box">
-                            <div class="counter-item">
-                                <div class="counter-item-style"></div>
-                                <div class="counter-item-inner p-5">
-                                    <i class="fas fa-heart fa-4x text-secondary"></i>
-                                    <h4 class="text-dark my-4">Years Experiance</h4>
-                                    <div class="counter-counting">
-                                        <span class="text-secondary fs-2 fw-bold" data-toggle="counter-up">17</span>
-                                        <span class="h1 fw-bold text-secondary">+</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center pt-4 wow fadeInUp" data-wow-delay="0.9s">
-                        <a class="counter-btn btn btn-secondary py-3 px-5" href="#">Join With Us</a>
-                    </div>
+        <!-- Step 2 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-primary d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">2</span> New Home Construction – We specialize in delivering high-quality new builds designed for modern living.</p>
                 </div>
+                <i class="fa-solid fa-building step-icon"></i>
             </div>
         </div>
-        <!-- Fact Counter -->
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
-                    <h2 class="display-4 text-capitalize mb-3">Our clients reviews.</h2>
+        <!-- Step 3 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-purple d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">3</span> Architectural Homes – Our expertise in complex architectural designs allows us to bring bold visions to life with precision.</p>
                 </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="testimonial-item bg-light p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="me-4">
-                                    <img src="img/testimonial-1.jpg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex text-secondary pe-5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="me-4">
-                                    <img src="img/testimonial-2.jpg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex text-secondary pe-5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star text-muted"></i>
-                                        <i class="fas fa-star text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="me-4">
-                                    <img src="img/testimonial-3.jpg" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex text-secondary pe-5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <i class="fa-solid fa-drafting-compass step-icon"></i>
             </div>
         </div>
-        <!-- Testimonial End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <!-- Step 4 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-warning d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">4</span> Project Management – We handle every aspect of construction, ensuring seamless execution and timely completion.</p>
+                </div>
+                <i class="fa-solid fa-diagram-project step-icon"></i>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-danger d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">5</span> Quality & Compliance – We prioritize safety, durability, and adherence to industry standards, giving you peace of mind.</p>
+                </div>
+                <i class="fa-solid fa-shield-halved step-icon"></i>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-info d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">6</span> Whether you have a clear vision or need guidance in designing your dream home, our expert team is here to make it happen.</p>
+                </div>
+                <i class="fa-solid fa-lightbulb step-icon"></i>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="col-12">
+            <div class="p-4 text-white step-card bg-gradient-dark d-flex justify-content-between align-items-center">
+                <div>
+                    <p><span class="step-number">7</span> We are committed to creating homes that are both functional and beautiful, ensuring your satisfaction throughout the process.</p>
+                </div>
+                <i class="fa-solid fa-heart step-icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+    <!-- Services End -->
+         <!-- Footer Start -->
+         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-white mb-4">Newsletter</h4>
-                                <p class="mb-3">HITECK QUALITY CONSTRUCTION is a premier custom home builder in Sydney, renowned for delivering exceptional craftsmanship and innovative solutions. With over ten years of expertise, we have built a strong reputation for taking on complex architectural projects, integrating cutting-edge technology, and creating timeless homes that reflect our clients’ aspirations.</p>
-                                
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4 text-start">Contact Info</h4>
+                            <div class="d-flex flex-column align-items-start text-start">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fa fa-map-marker-alt me-2"></i>
+                                    <span>St Liverpool NSW 2170</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    <span>infohiteckquality@gmail.com</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-phone me-2"></i>
+                                    <span>0421 181 999</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Explore</h4>
-                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> What we do</a>
-                            <a href="project.html"><i class="fas fa-angle-right me-2"></i> Projects</a>
-                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Our Services</h4>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> General Construction
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Property Maintenance
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Project Management
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Virtual Design & Build
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Residential Construction
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Preconstruction
-                            </div>
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-angle-right me-2"></i> Design Build
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fa fa-map-marker-alt me-2"></i>
-                                <span>St Liverpool NSW 2170</span>
-                            </div>
-                            
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-envelope me-2"></i>
-                                <span>infohiteckquality@gmail.com</span>
-                            </div>
-                            
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-phone me-2"></i>
-                                <span>0421 181 999</span>
-                            </div>
-                        </div>
-                    </div>                    
                 </div>
             </div>
         </div>
         <!-- Footer End -->
+
 
         
         
@@ -509,6 +297,7 @@
 
         
     <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
